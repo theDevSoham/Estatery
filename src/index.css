@@ -1,0 +1,537 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme: #7064f2;
+    --spa_color: #f8f7fd;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    width: 98vw;
+    background: linear-gradient(to right, #e4d6fa, #f7d6f9);
+}
+
+.container {
+    width: 80%;
+    min-height: 100vw;
+    margin: 0 auto;
+    position: relative;
+    padding: 6rem 0;
+    /* border: 3px solid rgb(190, 23, 23); */
+}
+
+.spa {
+    background: var(--spa_color);
+    width: 100%;
+    min-height: 90vw;
+    height: 150vw;
+    border-radius: 16px;
+    padding: 2rem 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background: #faf9fe;
+}
+
+.left {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+
+.left ul>li {
+    list-style: none;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    transition: 0.5s;
+}
+
+.left ul>li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+    background: transparent;
+}
+
+.left ul>li:hover {
+    background: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--theme);
+}
+
+.left ul>li:hover .route a {
+    color: var(--theme);
+}
+
+.left ul>li a:hover {
+    text-decoration: none;
+    color: var(--theme);
+}
+
+.logo img {
+    width: 10rem;
+    height: 4.5rem;
+}
+
+.right {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.dropdown p {
+    margin: 0;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+    background: transparent;
+}
+
+.dropdown p:hover {
+    text-decoration: none;
+    color: var(--theme);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: display 0.5s;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content a {
+    color: var(--theme);
+}
+
+.not-bg-button button {
+    background: transparent;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    color: var(--theme);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.not-bg-button button:hover {
+    background: var(--theme);
+    border: none;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.bg-button button {
+    background: var(--theme);
+    border: none;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.bg-button button:hover {
+    background: transparent;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    color: var(--theme);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.search input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.search input[type="text"]::placeholder {
+    color: var(--theme);
+    font-weight: 600;
+}
+
+.search input[type="text"]:focus {
+    outline: none;
+    transform: scaleX(1.3)scaleY(1.2);
+    border: 1px solid var(--theme);
+}
+
+.subhead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.selector {
+    padding: 3rem 2rem;
+}
+
+.selector p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(147, 141, 141);
+    text-transform: capitalize;
+}
+
+.selector select[class="select"],
+.selector input[type="date"] {
+    /* border: 2px solid #ccc; */
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: 0.5s;
+}
+
+.selector select[class="select"]:focus {
+    transform: scaleX(1.3)scaleY(1.2);
+}
+
+.selector select[class="select"]:focus-visible {
+    outline: none;
+}
+
+.selector input[type="text"] {
+    /* border: 2px solid #ccc; */
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: 0.5s;
+}
+
+.selector input[type="text"]:focus {
+    transform: scaleX(1.3)scaleY(1.2);
+    outline: none;
+}
+
+.selector input[type="text"]:focus-visible {
+    border: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 30px;
+    padding: 0 5rem;
+    margin-top: 4rem;
+}
+
+.card {
+    width: 100%;
+    height: 30rem;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 6px 17px -13px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0px 6px 17px -13px rgb(0 0 0 / 75%);
+    box-shadow: 0px 6px 17px -13px rgb(0 0 0 / 75%);
+    animation: myAnim 0.5s ease 0s 1 normal forwards;
+}
+
+.image {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    border-radius: 10px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+}
+
+.price p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--theme);
+}
+
+.wishlist svg {
+    width: 32px;
+}
+
+.name h1 {
+    margin: 0;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.address {
+    padding: 0 2rem;
+}
+
+.address p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgb(147, 141, 141);
+}
+
+.desc {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.beds p,
+.bathrooms p,
+.space p {
+    color: rgb(147, 141, 141);
+    ;
+}
+
+@keyframes myAnim {
+    0% {
+        transform: scaleX(0)scaleY(0);
+    }
+    100% {
+        transform: scaleX(1)scaleY(1);
+    }
+}
+
+@media all and (max-width: 768px) {
+    body {
+        width: 100vw;
+        background: linear-gradient(to right, #e4d6fa, #f7d6f9);
+    }
+    .container {
+        width: 90%;
+        height: 80rem;
+        margin: 0 auto;
+        position: relative;
+        padding: 2rem 0;
+        /* border: 3px solid rgb(190, 23, 23); */
+    }
+    .spa {
+        background: var(--spa_color);
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .nav {
+        display: block;
+        padding: 3rem;
+        background: #faf9fe;
+    }
+    .left {
+        width: 70%;
+        display: block;
+    }
+    .left ul {
+        display: block;
+        flex-wrap: wrap;
+        margin-left: 1rem;
+        margin-bottom: 0;
+    }
+    .left ul>li {
+        list-style: none;
+        padding: 1rem 1.5rem;
+        background: transparent;
+        transition: 0.5s;
+    }
+    .left ul>li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1rem;
+        font-weight: 700;
+        background: transparent;
+    }
+    .left ul>li:hover {
+        background: #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        color: var(--theme);
+    }
+    .left ul>li:hover .route a {
+        color: var(--theme);
+    }
+    .left ul>li a:hover {
+        text-decoration: none;
+        color: var(--theme);
+    }
+    .right {
+        width: 30%;
+        display: block;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        transition: 0.5s;
+    }
+    .dropdown p {
+        margin: 0;
+        color: #000;
+        font-size: 1rem;
+        font-weight: 700;
+        background: transparent;
+    }
+    .dropdown p:hover {
+        text-decoration: none;
+        color: var(--theme);
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        transition: display 0.5s;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+        cursor: pointer;
+    }
+    .dropdown:hover .dropdown-content a {
+        color: var(--theme);
+    }
+    .not-bg-button button {
+        background: transparent;
+        border: 3px solid #ccc;
+        border-radius: 9px;
+        color: var(--theme);
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0.4rem 1rem;
+        margin: 0 1rem;
+        cursor: pointer;
+        transition: 0.7s;
+    }
+    .not-bg-button button:hover {
+        background: var(--theme);
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+        margin: 0 1rem;
+        cursor: pointer;
+        transition: 0.7s;
+    }
+    .bg-button button {
+        background: var(--theme);
+        border: none;
+        border-radius: 9px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+        margin: 0 1rem;
+        cursor: pointer;
+        transition: 0.7s;
+    }
+    .bg-button button:hover {
+        background: transparent;
+        border: 3px solid #ccc;
+        border-radius: 5px;
+        color: var(--theme);
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0.4rem 1rem;
+        margin: 0 1rem;
+        cursor: pointer;
+        transition: 0.7s;
+    }
+}
