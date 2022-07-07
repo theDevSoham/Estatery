@@ -1,6 +1,6 @@
 import Card from './Card'
 
-const Cards = ({resData, check}) => {
+const Cards = ({resData}) => {
 
     var ind = 0;
 
