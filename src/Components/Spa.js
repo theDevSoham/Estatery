@@ -49,7 +49,7 @@ const Spa = () => {
 
   useEffect(() => {
     const Req = async() => {
-      const response = await fetch('http://localhost:8080/post', {
+      const response = await fetch('https://estatery-backend.herokuapp.com/post', {
         method: 'GET',
         redirect: 'follow'
       });
