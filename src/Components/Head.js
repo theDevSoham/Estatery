@@ -4,9 +4,9 @@ import Subhead from "./Subhead";
 const Head = ({getValuesFromHead}) => {
   const [search, setSearch] = useState("");
 
-//   useEffect(() => {
-//     console.log(search);
-//   }, [search]);
+  // useEffect(() => {
+  //   console.log(search);
+  // }, [search]);
 
   return (
     <div>

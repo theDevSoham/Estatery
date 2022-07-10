@@ -48,26 +48,28 @@ const Spa = () => {
   ]);
 
   useEffect(() => {
+    setResData(resData => resData.filter(item => {
+      if (objectOfVal.searchVal === "") {
+        console.log(item);
+        return item;
+      }else if(objectOfVal.searchVal === item.name && objectOfVal.location === item.location) {
+        console.log(item);
+        return item;
+      }
+    }));
+
+    console.log(objectOfVal);
+  }, [objectOfVal]);
+
+  useEffect(() => {
     const Req = async() => {
-      const response = await fetch('https://estatery-backend.herokuapp.com/post', {
-        method: 'GET',
-        redirect: 'follow'
-      });
+      const response = await fetch('https://estatery-backend.herokuapp.com/post');
       const data = await response.json();
       setResData(data);
     }
 
     Req();
-    setResData(resData => resData.filter(item => {
-      if (objectOfVal.searchVal === "initiate") {
-        return item;
-      } else if(objectOfVal.searchVal === item.checkObj.searchVal && objectOfVal.location === item.checkObj.location && objectOfVal.price === item.checkObj.price && objectOfVal.type === item.checkObj.type && objectOfVal.date === item.checkObj.date) {
-        return item;
-      }
-    }));
-
-    //console.log(objectOfVal);
-  }, [objectOfVal]);
+  }, []);
 
   const getValues = objectOfValues => {
     setObjectOfVal(objectOfValues);
