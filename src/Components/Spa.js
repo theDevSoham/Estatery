@@ -56,7 +56,8 @@ const Spa = () => {
 
   useEffect(() => {
     const Req = async() => {
-      const response = await fetch('https://estatery-backend.herokuapp.com/post');
+      const response = await fetch('http://localhost:8080/post');
+      //https://estatery-backend.herokuapp.com/post
       const data = await response.json();
       setResData(data);
     }
