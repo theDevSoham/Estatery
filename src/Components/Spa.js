@@ -37,13 +37,6 @@ const Spa = () => {
       name: 'Palm Harbor',            
       address: '2699Green Valley, Highland Lake, FL',
       desc: { beds: 3, bathrooms: 2, space: "5x3" },
-      checkObj: {
-        searchVal: "initiate",
-        location: "New York, USA",
-        price: "$500 - $2,500",
-        type: "Houses",
-        date: "2022-07-08"
-      }
     }
   ]);
 
