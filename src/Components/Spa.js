@@ -41,7 +41,7 @@ const Spa = () => {
   ]);
 
   useEffect(() => {
-    setResData(resData => resData.filter(item => {
+    setResData(resData.filter(item => {
       if (objectOfVal.searchVal === "") {
         console.log(item);
         return item;
