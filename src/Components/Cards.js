@@ -7,7 +7,7 @@ const Cards = ({resData}) => {
 
   return (
     <div className="cards">
-        {resData.map(item => {
+        {resData.length > 0 ? resData.map(item => {
             return <Card 
             key={ind++}
             price={item.price} 
@@ -16,7 +16,7 @@ const Cards = ({resData}) => {
             desc={{beds: item.desc.beds, bathrooms: item.desc.bathrooms, space: item.desc.space}}
             src={item.src}
             />
-        })}
+        }) : <p>No data to show</p>}
     </div>
   )
 }
