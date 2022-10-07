@@ -45,7 +45,7 @@ const Spa = () => {
       if (objectOfVal.searchVal === "") {
         console.log(item);
         return item;
-      }else if(objectOfVal.searchVal === item.name && objectOfVal.location === item.location) {
+      }else if(objectOfVal.searchVal === item.name && objectOfVal.location === item.location && objectOfVal.price === item.price && objectOfVal.type === item.type && objectOfVal.date === item.date) {
         console.log(item);
         return item;
       }
