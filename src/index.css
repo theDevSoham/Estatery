@@ -381,6 +381,14 @@ body {
 }
 
 @media all and (max-width: 768px) {
+    
+    .head{
+        align-items: center;
+        /* display: flex; */
+        justify-content: space-around;
+        padding: 3rem;
+    }
+    
     body {
         width: 100vw;
         background: linear-gradient(to right, #e4d6fa, #f7d6f9);
@@ -532,5 +540,22 @@ body {
         margin: 0 1rem;
         cursor: pointer;
         transition: 0.7s;
+    }
+    
+    .cards {
+        grid-gap: 30px 30px;
+        /* display: grid; */
+        gap: 30px 30px;
+        grid-template-columns: repeat(3,1fr);
+        margin-top: 4rem;
+        padding: 0 5rem;
+    }
+    
+    .subhead {
+        /* align-items: center; */
+        background: #fff;
+        border-radius: 5px;
+        /* display: flex; */
+        justify-content: center;
     }
 }
