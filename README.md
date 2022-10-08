@@ -1,5 +1,7 @@
 # Estatery Landing Page
 
+A React based landing page for an online real estate application. Here the users are allowed to search and interact through the page for the property they want to trade. This repo is currently under development and MIT licensed.
+
 ## What is the use of this Repo
 
 This Project is a Simple ReactJS Project which demonstrates the following
